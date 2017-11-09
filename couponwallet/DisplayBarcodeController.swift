@@ -19,7 +19,9 @@ class CreateViewController: UIViewController {
         super.viewDidLoad()
 
         //generating a bar code
-        QRImage.image = UIImage.makeBarcode(codeType: type, codeContent: result)
+        if let barcodeImg = UIImage.makeBarcode(codeType: type, codeContent: result) {
+            QRImage.image = UIImage.addBarcodeText(barcodeImg: barcodeImg, codeContent: result)
+        }
     }
 
     override func didReceiveMemoryWarning() {
