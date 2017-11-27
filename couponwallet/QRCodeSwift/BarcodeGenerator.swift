@@ -19,6 +19,19 @@ extension UIImage {
             machineReadableCodeObjectType: codeType)
     }
     
+    //sharpen image
+    class func sharpenImage(barcodeImg:UIImage) -> UIImage?  {
+        let sharpenFilter = CIFilter(name: "CISharpenLuminance") ///细节锐化滤镜
+        ///It operates on the luminance of the image; the chrominance of the pixels remains unaffected.
+        sharpenFilter?.setDefaults()
+        sharpenFilter?.setValue(barcodeImg, forKey: kCIInputImageKey)
+//        sharpenFilter?.setValue(1, forKey:"inputSharpness")
+        if let output = sharpenFilter?.outputImage {
+            return UIImage(ciImage: output)
+        }
+        return nil
+    }
+    
     //添加条形码下方文字
     class func addBarcodeText(barcodeImg:UIImage, codeContent:String) ->UIImage? {
         let size = CGSize(width: barcodeImg.size.width, height: barcodeImg.size.height+30)

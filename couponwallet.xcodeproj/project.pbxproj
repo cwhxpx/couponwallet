@@ -18,6 +18,10 @@
 		01409F031FB3CEB30011E313 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01409EFF1FB3CEB30011E313 /* AVCaptureSessionManager.swift */; };
 		01409F041FB3CEB30011E313 /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01409F001FB3CEB30011E313 /* BarcodeGenerator.swift */; };
 		01409F051FB3CEB30011E313 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 01409F011FB3CEB30011E313 /* ZZYQRCode.bundle */; };
+		017DF19E1FBBB892007D27D0 /* CouponCodesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 017DF19C1FBBB892007D27D0 /* CouponCodesModel.xcdatamodeld */; };
+		017DF1A11FBBBB8F007D27D0 /* BarCode+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DF19F1FBBBB8F007D27D0 /* BarCode+CoreDataClass.swift */; };
+		017DF1A21FBBBB8F007D27D0 /* BarCode+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DF1A01FBBBB8F007D27D0 /* BarCode+CoreDataProperties.swift */; };
+		017DF1A91FBD27D4007D27D0 /* CouponcodeDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DF1A81FBD27D4007D27D0 /* CouponcodeDisplayCell.swift */; };
 		AD76FB1A26FCD9A0D7951AAE /* Pods_couponwallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A96636745BF683877B3198FB /* Pods_couponwallet.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		01409EFF1FB3CEB30011E313 /* AVCaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionManager.swift; sourceTree = "<group>"; };
 		01409F001FB3CEB30011E313 /* BarcodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
 		01409F011FB3CEB30011E313 /* ZZYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZYQRCode.bundle; sourceTree = "<group>"; };
+		017DF19D1FBBB892007D27D0 /* CouponCodesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CouponCodesModel.xcdatamodel; sourceTree = "<group>"; };
+		017DF19F1FBBBB8F007D27D0 /* BarCode+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BarCode+CoreDataClass.swift"; sourceTree = "<group>"; };
+		017DF1A01FBBBB8F007D27D0 /* BarCode+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BarCode+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		017DF1A81FBD27D4007D27D0 /* CouponcodeDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponcodeDisplayCell.swift; sourceTree = "<group>"; };
 		3999720A48DE8C397A39FB12 /* Pods-couponwallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-couponwallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-couponwallet/Pods-couponwallet.release.xcconfig"; sourceTree = "<group>"; };
 		A96636745BF683877B3198FB /* Pods_couponwallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_couponwallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADDCD87CD932FDF2343C9BD7 /* Pods-couponwallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-couponwallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-couponwallet/Pods-couponwallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,11 +82,13 @@
 		011E2CEF1FB182610075AE9A = {
 			isa = PBXGroup;
 			children = (
+				017DF1A31FBBC19F007D27D0 /* CouponCodesModels */,
 				011E2CFA1FB182610075AE9A /* couponwallet */,
 				011E2D0F1FB182610075AE9A /* couponwalletTests */,
 				011E2CF91FB182610075AE9A /* Products */,
 				BBB95A50B41F136CC4D1CF38 /* Pods */,
 				6A5E1F3B3DBEE0E6C2699398 /* Frameworks */,
+				017DF19C1FBBB892007D27D0 /* CouponCodesModel.xcdatamodeld */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +113,7 @@
 				011E2D021FB182610075AE9A /* Assets.xcassets */,
 				011E2D041FB182610075AE9A /* LaunchScreen.storyboard */,
 				011E2D071FB182610075AE9A /* Info.plist */,
+				017DF1A81FBD27D4007D27D0 /* CouponcodeDisplayCell.swift */,
 			);
 			path = couponwallet;
 			sourceTree = "<group>";
@@ -124,6 +135,31 @@
 				01409F011FB3CEB30011E313 /* ZZYQRCode.bundle */,
 			);
 			path = QRCodeSwift;
+			sourceTree = "<group>";
+		};
+		017DF1A31FBBC19F007D27D0 /* CouponCodesModels */ = {
+			isa = PBXGroup;
+			children = (
+				017DF1A51FBBC1E2007D27D0 /* API */,
+				017DF1A41FBBC1C8007D27D0 /* Model */,
+			);
+			path = CouponCodesModels;
+			sourceTree = "<group>";
+		};
+		017DF1A41FBBC1C8007D27D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				017DF1A01FBBBB8F007D27D0 /* BarCode+CoreDataProperties.swift */,
+				017DF19F1FBBBB8F007D27D0 /* BarCode+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		017DF1A51FBBC1E2007D27D0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		6A5E1F3B3DBEE0E6C2699398 /* Frameworks */ = {
@@ -307,8 +343,12 @@
 				011E2CFE1FB182610075AE9A /* ViewController.swift in Sources */,
 				01409F041FB3CEB30011E313 /* BarcodeGenerator.swift in Sources */,
 				011E2CFC1FB182610075AE9A /* AppDelegate.swift in Sources */,
+				017DF1A91FBD27D4007D27D0 /* CouponcodeDisplayCell.swift in Sources */,
+				017DF1A21FBBBB8F007D27D0 /* BarCode+CoreDataProperties.swift in Sources */,
 				01409EFC1FB3CD010011E313 /* DisplayBarcodeController.swift in Sources */,
+				017DF19E1FBBB892007D27D0 /* CouponCodesModel.xcdatamodeld in Sources */,
 				01409F031FB3CEB30011E313 /* AVCaptureSessionManager.swift in Sources */,
+				017DF1A11FBBBB8F007D27D0 /* BarCode+CoreDataClass.swift in Sources */,
 				0107A00A1FB3E73500EB2E8D /* ScanBarcodeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +422,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
+				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = disable;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -439,6 +481,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_ACTIVITY_MODE = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -555,6 +598,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		017DF19C1FBBB892007D27D0 /* CouponCodesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				017DF19D1FBBB892007D27D0 /* CouponCodesModel.xcdatamodel */,
+			);
+			currentVersion = 017DF19D1FBBB892007D27D0 /* CouponCodesModel.xcdatamodel */;
+			path = CouponCodesModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 011E2CF01FB182610075AE9A /* Project object */;
 }

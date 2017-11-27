@@ -21,5 +21,6 @@ extension BarCode {
     @NSManaged public var barcode_content: String?
     @NSManaged public var expiree_date: NSDate?
     @NSManaged public var receipt_picture: NSData?
+    @NSManaged public var barcode: NSData?
 
 }

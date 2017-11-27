@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "woolworths-logo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "qrcode_scanline_qrcode@2x.png",
       "scale" : "2x"
     },
     {

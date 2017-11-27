@@ -105,8 +105,8 @@ open class RSAbstractCodeGenerator : RSCodeGenerator {
         // Bottom spacing       = 2
         // Left & right spacing = 2
         // Height               = 28
-        let width = length + 4
-        let size = CGSize(width: CGFloat(width), height: 28)
+        let width = length + 2
+        let size = CGSize(width: CGFloat(width), height: 45)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         if let context = UIGraphicsGetCurrentContext() {
             context.setShouldAntialias(false)
@@ -115,7 +115,7 @@ open class RSAbstractCodeGenerator : RSCodeGenerator {
             self.strokeColor.setStroke()
             
             context.fill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
-            context.setLineWidth(1)
+            context.setLineWidth(0.67)
             
             for i in 0..<length {
                 if completeBarcode[i] == "1" {

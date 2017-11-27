@@ -24,8 +24,13 @@ class AVCaptureSessionManager: AVCaptureSession, AVCaptureMetadataOutputObjectsD
     private var block: SuccessBlock?
     
     private lazy var device: AVCaptureDevice = {
-       return AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
-    }()
+//       return AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+//    }()
+        return AVCaptureDevice.defaultDevice(
+            withDeviceType: AVCaptureDeviceType.builtInWideAngleCamera,
+            mediaType: AVMediaTypeVideo,
+            position: AVCaptureDevicePosition.back)
+        }()!
     
     private lazy var preViewLayer: AVCaptureVideoPreviewLayer = {
         return AVCaptureVideoPreviewLayer(session: self)
